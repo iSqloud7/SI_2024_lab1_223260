@@ -1,0 +1,82 @@
+4.
+mkdir SI_2024_lab1_223260
+cd C:\Users\Ivan\Desktop\SI_2024_lab1_223260
+git init
+5.
+git remote add origin https://github.com/iSqloud7/SI_2024_lab1_223260.git
+git remote -v (за преглед дали е поврзан local repo со git repo)
+6.
+notepad README.md (креирање Windows PowerShell)
+git add README.md (на stage)
+git status 
+git commit -m "Initial commit"
+git push origin master
+git log (проверка на сите commits)
+7.
+после преземањето на трите датотеки
+git add SILab1Main.java SILab1_1.java SILab1_2.java (на stage)
+git status (влегуваат во stage, од untracked files)
+git commit -m "Add starter code"
+8.
+git push origin master (синхронизација на датотеките)
+9.
+git branch bug1
+git branch bug2
+git branch (за проверка на гранките)
+10.
+git checkout bug1
+11.
+notepad SILab1_1.java (за измени)
+git add SILab1_1.java
+git status (оди во modified)
+git commit -m "Fix wrong condition in filterOddLengthStrings"
+git log (за проверка на commits)
+12.
+git checkout bug2
+13.
+notepad SILab1_2.java (за измени)
+git add SILab11_2.java
+git status (оди во modified)
+git commit -m "Fix wrong condition in makeBigStringFrom"
+git log (за проверка на commits)
+14.
+git checkout bug1
+15.
+notepad SILab1Main.java
+git add SILab1Main.java
+git commit -m "Call method filterOddLengthStrings in main class"
+git log (за проверка на commits)
+16.
+git checkout bug2
+17.
+notepad SILab1Main.java
+git add SILab1Main.java
+git commit -m "Call method makeBigStringFrom in main class"
+git log (за проверка на commits)
+18.
+git push origin --all
+19.
+git checkout master
+20.
+git merge bug1
+git log (за приказ на споените датотеки на master i bug1)
+21.
+git push origin master
+22.
+git checkout bug2
+23.
+git rebase master (и ќе јави конфликти)
+notepad SILab1Main.java (поправање на конфликтот)
+git add SILab1Main.java
+git rebase --continue (и излегуваме со :wq од едиторот)
+24.
+git checkout master
+25.
+git merge bug2
+26.
+git push origin master
+27.
+git push -u --force origin bug2
+28.
+notepad logs.txt
+
